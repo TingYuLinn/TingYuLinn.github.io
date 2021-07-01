@@ -1,0 +1,209 @@
+.ocean { 
+  height: 200px;
+  width:100%;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.ocean.v01 {
+	transform: rotate(180deg);
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.wave {
+  background: url(../img/wave.svg) repeat-x; 
+  position: absolute;
+  bottom: -25px;
+  width: 6400px;
+  height: 100%;
+  animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+  transform: translate3d(0, 0, 0);
+}
+
+.wave:nth-of-type(2) {
+  bottom: -25px;
+  animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
+  opacity: 1;
+}
+
+@keyframes wave {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: -1600px;
+  }
+}
+
+@keyframes swell {
+  0%, 100% {
+    transform: translateY(-25px);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+}
+.wrap{
+  width: 100%;
+  margin-top: 160px;
+  padding-bottom: 100px;
+  font-size: 14px;
+  background-color: #EBF6F7;
+  position: absolute;
+  z-index: 1;
+}
+.resume-content, .col-9, .col-md-6, .col-md-5, .col-6, .col-7, .col-5, .col-md-auto{
+  /* border: 1px solid black; */
+}
+h4{
+  font-size: 10px;
+}
+.photo{
+  text-align: center;
+}
+.photo img{
+  border-radius: 5px;
+}
+.github a{
+  color: black;
+}
+.github a:hover{
+  color: black;
+  background-color: #F3BA35;
+  padding: 3px 5px;
+  border-radius: 15px;
+}
+.table-content{
+  width: 230px;
+  margin: auto;
+}
+.icon-center{
+  text-align: center;
+}
+.words-intro{
+  line-height: 28px;
+}
+/* 學習經歷的timeline */
+.timeline-section{
+  position: relative;
+}
+.timeline-section::after{
+  content: "";
+  position: absolute;
+  top: 8px;
+  bottom: 0;
+  left: 0;
+  width: 1px;
+  transform: translateX(-50%);
+  background-color: rgb(39, 37, 37);
+}
+.timeline-pointer{
+  position: relative;
+}
+.timeline-pointer::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  border: 2px solid rgb(109, 102, 102);
+  margin: 8px;
+  transform: translateX(30%);
+  background-color: rgb(109, 102, 102);
+  z-index: 1;
+}
+
+.section2-l, .section2-r{
+  background-color: #fff;
+  border-radius: 5px;
+}
+.experience-intro{
+  line-height: 28px;
+}
+.ex-detail{
+  font-size: 13px;
+  color: rgb(110, 110, 110);
+}
+.mouse-hover:hover{
+  background-color: #F3BA35;
+}
+
+/* scroll bar */
+.scroll-bar-wrap {
+  position: relative;
+  margin: 2em auto;
+}
+.scroll-bar-wrap a{
+  text-decoration: none;
+  color: black;
+}
+.scroll-bar-wrap a:hover{
+  color: rgb(0, 0, 0);
+}
+.scroll-box {
+  width: 100%;
+  height: 420px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.scroll-box::-webkit-scrollbar {
+  width: .4em; 
+}
+.scroll-box::-webkit-scrollbar,
+.scroll-box::-webkit-scrollbar-thumb {
+  overflow:visible;
+  border-radius: 4px;
+}
+.scroll-box::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,.2); 
+}
+.cover-bar {
+  position: absolute;
+  background: #fff;;
+  height: 100%;  
+  top: 0;
+  right: 0;
+  width: .4em;
+  -webkit-transition: all .5s;
+  opacity: 1;
+}
+.scroll-bar-wrap:hover .cover-bar {
+   opacity: 0;
+  -webkit-transition: all .5s;
+}
+.progress{
+  height: 10px;
+}
+.en-detail{
+  line-height: 28px;
+}
+.en-circle{
+  position: relative;
+}
+.en-grade{
+  position: absolute;
+  padding: 40px;
+
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 576px){
+  .timeline-section::after,
+  .timeline-pointer::after{
+      display: none;
+  }
